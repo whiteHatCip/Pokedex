@@ -21,7 +21,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSI-9q-Kos">
@@ -144,7 +144,7 @@
                         <viewControllerLayoutGuide type="bottom" id="JRE-ry-YcQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Dfz-Ma-vSb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDE-er-6Kf">
@@ -156,6 +156,9 @@
                                             <constraint firstAttribute="width" constant="40" id="Zii-Zj-dL9"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="aEZ-bv-XOx" eventType="touchUpInside" id="nsP-5A-P4j"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charmender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="YwS-hF-Zxu">
                                         <constraints>
@@ -176,9 +179,9 @@
                                     <constraint firstAttribute="height" constant="65" id="hXe-uR-KZF"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fzi-OT-wsN">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fzi-OT-wsN">
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qGn-T8-KQX">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qGn-T8-KQX">
                                         <subviews>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uAH-Ue-Hc6">
                                                 <constraints>
@@ -192,7 +195,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="UOm-Ak-Z8N">
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="vB6-3s-pQu"/>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charmender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM0-Px-dyy">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="hM0-Px-dyy">
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="120" id="4PO-yJ-yYe"/>
+                                                        </constraints>
+                                                        <string key="text">From the time it is born, a flame burns
+at the tip of its tail. Its life would end
+if the flame were to go out.</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -339,9 +348,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUE-AU-aHp">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Evolution: Charmeleon LVL 32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxp-qU-1RO">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="dTp-wt-BoY"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -349,10 +355,11 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="vxp-qU-1RO" firstAttribute="leading" secondItem="WUE-AU-aHp" secondAttribute="leading" id="0u6-BD-oTm"/>
-                                    <constraint firstAttribute="trailing" secondItem="vxp-qU-1RO" secondAttribute="trailing" id="8lW-uN-PRi"/>
+                                    <constraint firstItem="vxp-qU-1RO" firstAttribute="centerY" secondItem="WUE-AU-aHp" secondAttribute="centerY" id="DKb-Kn-0wA"/>
                                     <constraint firstAttribute="height" constant="30" id="OpP-wr-2eC"/>
-                                    <constraint firstItem="vxp-qU-1RO" firstAttribute="centerY" secondItem="WUE-AU-aHp" secondAttribute="centerY" id="PXi-GR-SSE"/>
+                                    <constraint firstAttribute="trailing" secondItem="vxp-qU-1RO" secondAttribute="trailing" id="RYe-HD-Acc"/>
+                                    <constraint firstItem="vxp-qU-1RO" firstAttribute="leading" secondItem="WUE-AU-aHp" secondAttribute="leading" id="ZKS-uo-Ggc"/>
+                                    <constraint firstItem="vxp-qU-1RO" firstAttribute="top" secondItem="WUE-AU-aHp" secondAttribute="top" constant="2" id="xzJ-Zl-CE6"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qYJ-Lr-zkg">
@@ -377,14 +384,44 @@
                             <constraint firstAttribute="trailingMargin" secondItem="fzi-OT-wsN" secondAttribute="trailing" id="eKU-hi-drk"/>
                             <constraint firstItem="qYJ-Lr-zkg" firstAttribute="centerX" secondItem="Dfz-Ma-vSb" secondAttribute="centerX" id="hjn-7R-xR4"/>
                             <constraint firstItem="fzi-OT-wsN" firstAttribute="top" secondItem="IDE-er-6Kf" secondAttribute="bottom" constant="14" id="oy8-td-GhE"/>
-                            <constraint firstItem="JRE-ry-YcQ" firstAttribute="top" secondItem="WUE-AU-aHp" secondAttribute="bottom" constant="123" id="wFu-hc-PJP"/>
+                            <constraint firstItem="JRE-ry-YcQ" firstAttribute="top" secondItem="WUE-AU-aHp" secondAttribute="bottom" constant="123" id="wFu-hc-PJP" customClass="LayoutConstraint" customModule="Pokedex" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="📱4¨7_insh">
+                                        <real key="value" value="123"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="📱5¨5_insh">
+                                        <real key="value" value="123"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="📱4¨0_insh">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="📱3¨5_insh">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
                             <constraint firstItem="fzi-OT-wsN" firstAttribute="leading" secondItem="Dfz-Ma-vSb" secondAttribute="leadingMargin" id="waP-ir-UZU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="EvoViewConstraint" destination="wFu-hc-PJP" id="Iqm-PA-oqr"/>
+                        <outlet property="IdLbl" destination="IAX-Xk-GYf" id="S2H-Ul-PCo"/>
+                        <outlet property="attackLbl" destination="rNj-Di-h7J" id="p66-b3-Ore"/>
+                        <outlet property="currentEvoImg" destination="rfW-AV-jz4" id="ah7-Ch-4oR"/>
+                        <outlet property="defenseLbl" destination="pZ1-9f-UeH" id="RKo-tC-bQ5"/>
+                        <outlet property="descriptionLbl" destination="hM0-Px-dyy" id="Ps6-At-3jm"/>
+                        <outlet property="evoLbl" destination="vxp-qU-1RO" id="emQ-G1-LE2"/>
+                        <outlet property="heightLbl" destination="WaQ-1n-bPD" id="iJw-sl-nH5"/>
+                        <outlet property="mainImg" destination="vB6-3s-pQu" id="qH7-TU-NHa"/>
+                        <outlet property="nameLbl" destination="YwS-hF-Zxu" id="Q1P-Od-Mv8"/>
+                        <outlet property="nextEvoLbl" destination="y8F-mX-WA0" id="yxc-xJ-vEX"/>
+                        <outlet property="typeLbl" destination="dsv-60-M2d" id="JQq-x5-yhu"/>
+                        <outlet property="weightLbl" destination="75k-PR-p3l" id="bXh-C5-Y59"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckO-6Z-b0G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940.57971014492762" y="138.58695652173915"/>
+            <point key="canvasLocation" x="939.375" y="138.38028169014083"/>
         </scene>
     </scenes>
     <resources>
