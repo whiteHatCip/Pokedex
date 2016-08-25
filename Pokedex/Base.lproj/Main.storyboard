@@ -21,14 +21,16 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSI-9q-Kos">
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWr-nq-WX1">
-                                        <frame key="frameInset" minX="334" minY="26" width="33" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWr-nq-WX1">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="33" id="PZv-Ph-M7S"/>
+                                            <constraint firstAttribute="height" constant="31" id="UeQ-Ww-W4t"/>
+                                        </constraints>
                                         <state key="normal" image="music"/>
                                         <connections>
                                             <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I5L-Lf-a4a"/>
@@ -45,6 +47,8 @@
                                     <constraint firstAttribute="bottom" secondItem="Kc6-Hl-Smr" secondAttribute="bottom" constant="4" id="G4S-dI-fIv"/>
                                     <constraint firstItem="Kc6-Hl-Smr" firstAttribute="centerX" secondItem="VSI-9q-Kos" secondAttribute="centerX" id="Ilf-1A-saw"/>
                                     <constraint firstAttribute="height" constant="65" id="TnY-Ht-Bon"/>
+                                    <constraint firstAttribute="bottom" secondItem="vWr-nq-WX1" secondAttribute="bottom" constant="8" id="fUg-Js-Yse"/>
+                                    <constraint firstAttribute="trailing" secondItem="vWr-nq-WX1" secondAttribute="trailing" constant="8" id="gRG-6S-MMC"/>
                                 </constraints>
                             </view>
                             <searchBar contentMode="redraw" placeholder="Search for pokèmons" translatesAutoresizingMaskIntoConstraints="NO" id="2nz-QJ-qzx">
@@ -140,7 +144,7 @@
                         <viewControllerLayoutGuide type="bottom" id="JRE-ry-YcQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Dfz-Ma-vSb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDE-er-6Kf">
@@ -153,9 +157,10 @@
                                         </constraints>
                                         <state key="normal" image="back"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Charmender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwS-hF-Zxu">
-                                        <frame key="frameInset" minX="54" minY="8" width="214" height="49"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charmender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="YwS-hF-Zxu">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="qBE-iT-zhX"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -165,6 +170,9 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="PEU-sN-LpD" secondAttribute="bottom" constant="8" id="SLh-38-Mof"/>
                                     <constraint firstItem="PEU-sN-LpD" firstAttribute="leading" secondItem="IDE-er-6Kf" secondAttribute="leading" constant="8" id="U6a-Xg-yhN"/>
+                                    <constraint firstAttribute="bottom" secondItem="YwS-hF-Zxu" secondAttribute="bottom" id="YDE-wj-ofC"/>
+                                    <constraint firstAttribute="trailing" secondItem="YwS-hF-Zxu" secondAttribute="trailing" constant="100" id="aLF-by-mzm"/>
+                                    <constraint firstItem="YwS-hF-Zxu" firstAttribute="leading" secondItem="PEU-sN-LpD" secondAttribute="trailing" constant="52" id="fO1-wh-9wj"/>
                                     <constraint firstAttribute="height" constant="65" id="hXe-uR-KZF"/>
                                 </constraints>
                             </view>
@@ -327,7 +335,6 @@
                                     <constraint firstAttribute="trailing" secondItem="I55-g1-Urh" secondAttribute="trailing" id="9dt-rL-N6A"/>
                                     <constraint firstItem="I55-g1-Urh" firstAttribute="leading" secondItem="fzi-OT-wsN" secondAttribute="leading" id="m66-3e-QlV"/>
                                 </constraints>
-                                <variation key="heightClass=regular-widthClass=compact" spacing="0.0"/>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUE-AU-aHp">
                                 <subviews>
@@ -377,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckO-6Z-b0G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="941.25" y="138.75"/>
+            <point key="canvasLocation" x="940.57971014492762" y="138.58695652173915"/>
         </scene>
     </scenes>
     <resources>
