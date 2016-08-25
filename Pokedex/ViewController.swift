@@ -27,18 +27,30 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collection.dataSource = self
         searchBar.delegate = self
         
+        searchBar.returnKeyType = UIReturnKeyType.done
+        
         parsePokemonCSV()
         initAudio()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        view.endEditing(true)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text == nil || searchBar.text == "" {
             inSearchMode = false
+            collection.reloadData()
+            view.endEditing(true)
         } else {
             inSearchMode = true
             
             let lower = searchBar.text!.lowercased()
             
+            filteredPokemon = pokemons.filter({
+                $0.name.range(of: lower) != nil
+            })
+            collection.reloadData()
         }
     }
     
@@ -81,7 +93,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokeCell", for: indexPath) as? PokeCell {
             
-            let pokemon = pokemons[indexPath.row]
+            let pokemon: Pokemon!
+            
+            if inSearchMode {
+                pokemon = filteredPokemon[indexPath.row]
+            } else {
+                pokemon = pokemons[indexPath.row]
+            }
             cell.configureCell(pokemon)
             return cell
         } else {
@@ -94,8 +112,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return pokemons.count
+        if inSearchMode {
+            return filteredPokemon.count
+        } else {
+            return pokemons.count
+        }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
