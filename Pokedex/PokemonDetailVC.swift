@@ -23,15 +23,41 @@ class PokemonDetailVC: UIViewController {
     @IBOutlet weak var weightLbl: UILabel!
     @IBOutlet weak var attackLbl: UILabel!
     @IBOutlet weak var currentEvoImg: UIImageView!
-    @IBOutlet weak var nextEvoLbl: UIImageView!
+    @IBOutlet weak var nextEvoImg: UIImageView!
     @IBOutlet weak var evoLbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mainImg.image = UIImage(named: "\(pokemon.pokedexID)")
+        currentEvoImg.image = mainImg.image
+        nameLbl.text = pokemon.name.capitalized
+        IdLbl.text = "\(pokemon.pokedexID)"
+        pokemon.downloadPokemonDetails {
+            self.updateUI()
+            self.descriptionLbl.isHidden = false
+        }
         
     }
     @IBAction func backButtonPressed(_ sender: AnyObject) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func updateUI() {
+        attackLbl.text = pokemon.attack
+        defenseLbl.text = pokemon.defense
+        heightLbl.text = pokemon.height
+        weightLbl.text = pokemon.weight
+        typeLbl.text = pokemon.type
+        
+        if pokemon.nextEvolutionID != "" {
+            nextEvoImg.isHidden = false
+            evoLbl.text = "Next Evolution: " + pokemon.nextEvolutionTxt + " - LVL " + pokemon.nextEvolutionLvl
+        } else {
+            evoLbl.text = "Next Evolution: None"
+            nextEvoImg.isHidden = true
+        }
+        nextEvoImg.image = UIImage(named: "\(pokemon.nextEvolutionID)")
+        descriptionLbl.text = pokemon.description
     }
     
 }
