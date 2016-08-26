@@ -194,7 +194,12 @@
                                             </segmentedControl>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="UOm-Ak-Z8N">
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="vB6-3s-pQu"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="vB6-3s-pQu">
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="120" id="9Pw-n5-NHx"/>
+                                                            <constraint firstAttribute="width" constant="77" id="ECv-aU-HyY"/>
+                                                        </constraints>
+                                                    </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="hM0-Px-dyy">
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="120" id="4PO-yJ-yYe"/>
@@ -345,6 +350,30 @@ if the flame were to go out.</string>
                                     <constraint firstItem="I55-g1-Urh" firstAttribute="leading" secondItem="fzi-OT-wsN" secondAttribute="leading" id="m66-3e-QlV"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qYJ-Lr-zkg">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="rfW-AV-jz4"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="y8F-mX-WA0"/>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="uiO-QZ-GSY" customClass="LayoutConstraint" customModule="Pokedex" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="📱3¨5_insh">
+                                                <real key="value" value="98"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="📱4¨0_insh">
+                                                <real key="value" value="110"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="📱4¨7_insh">
+                                                <real key="value" value="110"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="📱5¨5_insh">
+                                                <real key="value" value="110"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUE-AU-aHp">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Evolution: Charmeleon LVL 32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxp-qU-1RO">
@@ -362,15 +391,6 @@ if the flame were to go out.</string>
                                     <constraint firstItem="vxp-qU-1RO" firstAttribute="top" secondItem="WUE-AU-aHp" secondAttribute="top" constant="2" id="xzJ-Zl-CE6"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qYJ-Lr-zkg">
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="rfW-AV-jz4"/>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="y8F-mX-WA0"/>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="uiO-QZ-GSY"/>
-                                </constraints>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -387,16 +407,16 @@ if the flame were to go out.</string>
                             <constraint firstItem="JRE-ry-YcQ" firstAttribute="top" secondItem="WUE-AU-aHp" secondAttribute="bottom" constant="123" id="wFu-hc-PJP" customClass="LayoutConstraint" customModule="Pokedex" customModuleProvider="target">
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="📱4¨7_insh">
-                                        <real key="value" value="123"/>
+                                        <integer key="value" value="130"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="📱5¨5_insh">
-                                        <real key="value" value="123"/>
+                                        <integer key="value" value="140"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="📱4¨0_insh">
-                                        <real key="value" value="100"/>
+                                        <integer key="value" value="123"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="📱3¨5_insh">
-                                        <real key="value" value="100"/>
+                                        <integer key="value" value="111"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </constraint>
